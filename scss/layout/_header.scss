@@ -13,9 +13,10 @@ header{
             justify-content: space-around;
             .navbar-brand{
                 display: flex;
-                height: 7rem;
+                height: 5rem;
+                margin-top: 2rem;
                 .logo{
-                    transform: scale(1);
+                    transform: scale(1.7);
                 }
             }
             .navbar-nav{

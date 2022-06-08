@@ -72,7 +72,7 @@
                 .navbar-brand{
                     margin-top: 3rem;
                     .logo{
-                        transform: scale(1.7);
+                        transform: scale(2);
                     }
                 }
             }
@@ -89,7 +89,6 @@
         gap: .5rem;
         padding: 1%;
         .tituloPrincipal{
-            margin-top: 3rem;
             font-size: 2.7rem;
             text-shadow: .2rem .2rem .3rem rgba(128, 128, 128, 0.767);
         }  
@@ -195,9 +194,10 @@
             "tituloPrincipal tituloPrincipal tituloPrincipal redesSociales"
             "noticiaUno noticiaDos noticiaTres formularioTrivia"
             "noticiaCuatro noticiaCinco noticiaSeis edicAnteriores";
-        grid-template-rows: .5fr 1fr 1fr;
+        grid-template-rows: .3fr 1fr 1fr;
         grid-template-columns: repeat(4, 1fr);
         .tituloPrincipal{
+            margin-bottom: 2rem;
             font-size: 3rem;
             text-shadow: .2rem .2rem .3rem rgba(128, 128, 128, 0.767);
         }
@@ -329,7 +329,7 @@
                     margin-right: 3rem;
                     margin-left: 3rem;
                     .logo{
-                        transform: scale(1.7);
+                        transform: scale(2.2);
                     }
                 }
                 .navbar-nav{

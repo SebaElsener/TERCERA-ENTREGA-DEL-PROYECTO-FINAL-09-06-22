@@ -121,9 +121,10 @@ header {
     justify-content: space-around; }
     header .navbar .container-fluid .navbar-brand {
       display: flex;
-      height: 7rem; }
+      height: 5rem;
+      margin-top: 2rem; }
       header .navbar .container-fluid .navbar-brand .logo {
-        transform: scale(1); }
+        transform: scale(1.7); }
     header .navbar .container-fluid .navbar-nav {
       text-align: center; }
       header .navbar .container-fluid .navbar-nav .nav-item {
@@ -150,7 +151,7 @@ header {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.8rem;
     text-shadow: 0.1rem 0.1rem 0.2rem rgba(128, 128, 128, 0.767);
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: bold;
     line-height: normal; }
@@ -339,13 +340,12 @@ footer {
   header .navbar .container-fluid .navbar-brand {
     margin-top: 3rem; }
     header .navbar .container-fluid .navbar-brand .logo {
-      transform: scale(1.7); }
+      transform: scale(2); }
   .grillaPpal {
     grid-template-areas: "tituloPrincipal tituloPrincipal" "noticiaUno noticiaDos" "noticiaTres noticiaCuatro" "noticiaCinco noticiaSeis" "formularioTrivia formularioTrivia" "edicAnteriores redesSociales";
     gap: .5rem;
     padding: 1%; }
     .grillaPpal .tituloPrincipal {
-      margin-top: 3rem;
       font-size: 2.7rem;
       text-shadow: 0.2rem 0.2rem 0.3rem rgba(128, 128, 128, 0.767); }
     .grillaPpal .noticiaCinco, .grillaPpal .noticiaSeis {
@@ -413,9 +413,10 @@ footer {
   /* estilos header index y demás html */
   .grillaPpal {
     grid-template-areas: "tituloPrincipal tituloPrincipal tituloPrincipal redesSociales" "noticiaUno noticiaDos noticiaTres formularioTrivia" "noticiaCuatro noticiaCinco noticiaSeis edicAnteriores";
-    grid-template-rows: .5fr 1fr 1fr;
+    grid-template-rows: .3fr 1fr 1fr;
     grid-template-columns: repeat(4, 1fr); }
     .grillaPpal .tituloPrincipal {
+      margin-bottom: 2rem;
       font-size: 3rem;
       text-shadow: 0.2rem 0.2rem 0.3rem rgba(128, 128, 128, 0.767); }
     .grillaPpal .noticiaUno, .grillaPpal .noticiaDos, .grillaPpal .noticiaTres, .grillaPpal .noticiaCuatro, .grillaPpal .noticiaCinco, .grillaPpal .noticiaSeis {
@@ -506,7 +507,7 @@ footer {
       margin-right: 3rem;
       margin-left: 3rem; }
       header .navbar .container-fluid .navbar-brand .logo {
-        transform: scale(1.7); }
+        transform: scale(2.2); }
     header .navbar .container-fluid .navbar-nav {
       gap: 2rem; }
     header .navbar .container-fluid .navbar-collapse {
