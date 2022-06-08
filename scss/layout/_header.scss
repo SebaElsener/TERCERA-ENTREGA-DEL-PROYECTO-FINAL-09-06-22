@@ -1,0 +1,42 @@
+
+/* propiedades-estilos header */
+
+
+header{
+    .nav-link{
+        @extend .aNavHeader-Footer;
+    }
+    background: linear-gradient(rgba(255, 255, 0, 0.151), rgb(202, 238, 247)), url(../img/imgpuente.jpg);
+    background-size: cover;
+    .navbar{
+        .container-fluid{
+            justify-content: space-around;
+            .navbar-brand{
+                display: flex;
+                height: 7rem;
+                .logo{
+                    transform: scale(1);
+                }
+            }
+            .navbar-nav{
+                text-align: center;
+                .nav-item{
+                    transition: background-color .6s;
+                    &:hover{
+                        background-color: rgba(178, 255, 255, 0.486);
+                    }
+                }
+            }
+        }
+    }
+    animation-duration: 1s;
+    animation-name: animationHeader;
+    @keyframes animationHeader {
+        from {
+          opacity: 0%;
+        }
+        to {
+          opacity: 100%;
+        }
+    }
+}

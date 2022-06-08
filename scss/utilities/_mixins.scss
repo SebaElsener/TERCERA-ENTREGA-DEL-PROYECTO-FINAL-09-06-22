@@ -1,0 +1,6 @@
+
+@mixin estilosRedesSociales ($colorBack, $transformTranslate, $sombraIcono) {
+    background-color: $colorBack;
+    transform: $transformTranslate;
+    box-shadow: $sombraIcono;
+}

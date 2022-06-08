@@ -1,0 +1,40 @@
+
+/* estilos aside redes sociales, bootstrap adaptado al proyecto */
+
+.redesSociales{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .iconoFacebook, .iconoWp, .iconoTw, .iconoInsta{
+        width: 2.5rem;
+        margin: 1rem;
+        border-radius: .7rem;
+        transition: .5s;
+    }
+    button, .btn, .btn-primary{
+            font-size: 1.1rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(235, 235, 235);
+            box-shadow: 2px 2px 4px black;
+            border: none;
+            color: rgb(54, 54, 54);
+        }
+    .iconoFacebook:hover{
+        @include estilosRedesSociales ($colorIconoFb, $transformHover, $sombraFb);
+    }
+    .iconoWp:hover{
+        @include estilosRedesSociales ($colorIconoWp, $transformHover, $sombraWp);
+    }
+    .iconoTw:hover{
+        @include estilosRedesSociales ($colorIconoTw, $transformHover, $sombraTw);
+    }
+    .iconoInsta:hover{
+        @include estilosRedesSociales ($colorIconoIg, $transformHover, $sombraIg);
+    }
+    .offcanvas{
+        height: fit-content;
+        text-align: center;
+        background-color: rgba(254, 255, 225, 0.644);
+        justify-content: center;
+    }
+}

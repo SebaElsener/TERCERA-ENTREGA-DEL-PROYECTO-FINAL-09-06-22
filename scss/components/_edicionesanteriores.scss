@@ -1,0 +1,28 @@
+
+
+.grillaPpal{
+    .edicAnteriores{
+        .tituloAside{
+            font-family: $tipografiaNavs;
+            margin-bottom: .5rem;
+            color: cadetblue;
+            font-size: $sizeTipoNavs;
+            text-align: center;
+        }
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+        justify-content: center;
+        .contenedorEdicAnteriores{
+            display: inline;
+            a{
+                margin: .5rem;
+                text-decoration: none;
+                img{
+                    border: 1px solid gray;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+
+/* propiedades-estilos footer */
+footer{
+    margin-top: 3rem;
+    padding: .5rem;
+    background: linear-gradient(rgb(171, 255, 248), rgb(116, 255, 202), greenyellow);
+    .navFooterLocal{
+        ul{        /* este estilo pisa el estilo ul de bootstrap para que no quede desacomodado el footer */
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+            line-height: normal;
+            font-family: 'Courier New', Courier, monospace;
+            li{
+                list-style: none;
+                a{
+                    @extend .aNavHeader-Footer;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+

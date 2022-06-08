@@ -1,0 +1,27 @@
+
+// utilities //
+@import "utilities/variables";
+@import "utilities/mixins";
+@import "utilities/extend";
+
+// resets //
+@import "base/reset";
+
+// estilos base //
+@import "base/base";
+
+// components //
+@import "components/formtrivia";
+@import "components/edicionesanteriores";
+@import "components/redes";
+
+// layout //
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
+@import "layout/acercade";
+@import "layout/contacto";
+@import "layout/seccionesdeportivas";
+@import "layout/mediaqueries";
+
+

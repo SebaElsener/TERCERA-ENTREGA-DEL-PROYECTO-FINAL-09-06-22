@@ -1,0 +1,518 @@
+@charset "UTF-8";
+.aNavHeader-Footer, header .nav-link, footer .navFooterLocal ul li a {
+  color: #696767;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+  text-decoration: none; }
+
+.tituloNoticia, .grillaPpal .tituloNoticia, .mainNoticiashtml .cajaNoticia .tituloNoticiaSecciones {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(0, 0, 0, 0.671);
+  margin: 0;
+  font-weight: bold;
+  line-height: normal; }
+
+/* reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+/* estilo body gradient */
+body {
+  background: linear-gradient(#dcf1f6, rgba(191, 248, 152, 0.612), #f6fbfc); }
+
+/* sobreescribiendo los estilos bootstrap formulario trivia html index */
+.formularioTrivia {
+  line-height: 1.2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  box-shadow: 2px 2px 6px black;
+  padding: 5%;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: .8rem;
+  font-weight: normal; }
+  .formularioTrivia .formLocal legend {
+    float: none;
+    width: auto;
+    font-size: 1.3rem;
+    margin: 0;
+    line-height: normal; }
+  .formularioTrivia .formLocal label {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem; }
+  .formularioTrivia .formLocal input {
+    margin-bottom: 1rem;
+    font-size: 1rem; }
+
+.grillaPpal .edicAnteriores {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  justify-content: center; }
+  .grillaPpal .edicAnteriores .tituloAside {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: .5rem;
+    color: cadetblue;
+    font-size: 1.2rem;
+    text-align: center; }
+  .grillaPpal .edicAnteriores .contenedorEdicAnteriores {
+    display: inline; }
+    .grillaPpal .edicAnteriores .contenedorEdicAnteriores a {
+      margin: .5rem;
+      text-decoration: none; }
+      .grillaPpal .edicAnteriores .contenedorEdicAnteriores a img {
+        border: 1px solid gray; }
+
+/* estilos aside redes sociales, bootstrap adaptado al proyecto */
+.redesSociales {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .redesSociales .iconoFacebook, .redesSociales .iconoWp, .redesSociales .iconoTw, .redesSociales .iconoInsta {
+    width: 2.5rem;
+    margin: 1rem;
+    border-radius: .7rem;
+    transition: .5s; }
+  .redesSociales button, .redesSociales .btn, .redesSociales .btn-primary {
+    font-size: 1.1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ebebeb;
+    box-shadow: 2px 2px 4px black;
+    border: none;
+    color: #363636; }
+  .redesSociales .iconoFacebook:hover {
+    background-color: #517fd3;
+    transform: translateY(-0.3rem) scale(1.07);
+    box-shadow: 0px 0px 15px 5px #517fd3; }
+  .redesSociales .iconoWp:hover {
+    background-color: #18a018;
+    transform: translateY(-0.3rem) scale(1.07);
+    box-shadow: 0px 0px 15px 5px #18a018; }
+  .redesSociales .iconoTw:hover {
+    background-color: #00c3ff;
+    transform: translateY(-0.3rem) scale(1.07);
+    box-shadow: 0px 0px 15px 5px #00c3ff; }
+  .redesSociales .iconoInsta:hover {
+    background-color: #f82ef8;
+    transform: translateY(-0.3rem) scale(1.07);
+    box-shadow: 0px 0px 15px 5px #f82ef8; }
+  .redesSociales .offcanvas {
+    height: fit-content;
+    text-align: center;
+    background-color: rgba(254, 255, 225, 0.644);
+    justify-content: center; }
+
+/* propiedades-estilos header */
+header {
+  background: linear-gradient(rgba(255, 255, 0, 0.151), #caeef7), url(../img/imgpuente.jpg);
+  background-size: cover;
+  animation-duration: 1s;
+  animation-name: animationHeader; }
+  header .navbar .container-fluid {
+    justify-content: space-around; }
+    header .navbar .container-fluid .navbar-brand {
+      display: flex;
+      height: 7rem; }
+      header .navbar .container-fluid .navbar-brand .logo {
+        transform: scale(1); }
+    header .navbar .container-fluid .navbar-nav {
+      text-align: center; }
+      header .navbar .container-fluid .navbar-nav .nav-item {
+        transition: background-color .6s; }
+        header .navbar .container-fluid .navbar-nav .nav-item:hover {
+          background-color: rgba(178, 255, 255, 0.486); }
+
+@keyframes animationHeader {
+  from {
+    opacity: 0%; }
+  to {
+    opacity: 100%; } }
+
+/* propiedades-estilos main index mobile first 570px hasta 800px */
+/* Grid main noticias */
+.grillaPpal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "tituloPrincipal tituloPrincipal" "noticiaUno noticiaUno" "noticiaDos noticiaDos" "noticiaTres noticiaTres" "noticiaCuatro noticiaCuatro" "noticiaCinco noticiaCinco" "noticiaSeis noticiaSeis" "formularioTrivia formularioTrivia" "edicAnteriores redesSociales";
+  text-align: center; }
+  .grillaPpal .tituloPrincipal {
+    grid-area: tituloPrincipal;
+    color: #14b6a0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.8rem;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(128, 128, 128, 0.767);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: normal; }
+  .grillaPpal .noticiaUno {
+    grid-area: noticiaUno;
+    margin-bottom: 1.5rem; }
+  .grillaPpal .noticiaDos {
+    grid-area: noticiaDos;
+    margin-bottom: 1.5rem; }
+  .grillaPpal .noticiaTres {
+    margin-bottom: 1.5rem;
+    grid-area: noticiaTres; }
+  .grillaPpal .noticiaCuatro {
+    margin-bottom: 1.5rem;
+    grid-area: noticiaCuatro; }
+  .grillaPpal .noticiaCinco {
+    margin-bottom: 1.5rem;
+    grid-area: noticiaCinco; }
+  .grillaPpal .noticiaSeis {
+    grid-area: noticiaSeis; }
+  .grillaPpal .formularioTrivia {
+    grid-area: formularioTrivia; }
+  .grillaPpal .edicAnteriores {
+    grid-area: edicAnteriores; }
+  .grillaPpal .cajaIframe {
+    width: 28rem;
+    height: 15rem; }
+  .grillaPpal .redesSociales {
+    grid-area: redesSociales; }
+
+/* propiedades-estilos footer */
+footer {
+  margin-top: 3rem;
+  padding: .5rem;
+  background: linear-gradient(#abfff8, #74ffca, greenyellow); }
+  footer .navFooterLocal ul {
+    /* este estilo pisa el estilo ul de bootstrap para que no quede desacomodado el footer */
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    font-family: 'Courier New', Courier, monospace; }
+    footer .navFooterLocal ul li {
+      list-style: none; }
+
+/* estilos html acerca de */
+.container-fluid .row {
+  justify-content: center; }
+  .container-fluid .row nav {
+    text-align: center; }
+    .container-fluid .row nav ul {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      background-color: #818181;
+      border-radius: 5px; }
+      .container-fluid .row nav ul li {
+        list-style-type: none;
+        text-decoration: none;
+        transition: .7s; }
+        .container-fluid .row nav ul li:hover {
+          background-color: #00b7ff; }
+        .container-fluid .row nav ul li a {
+          text-decoration: none;
+          color: aliceblue; }
+  .container-fluid .row .cajaAcercaDe {
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    width: 340px;
+    height: 230px;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    box-shadow: 2px 1px 10px 1px gray; }
+    .container-fluid .row .cajaAcercaDe .animate__animated {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      text-shadow: 2px 2px 10px gray;
+      font-size: 2rem; }
+    .container-fluid .row .cajaAcercaDe .derechosAcercaDe {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1rem;
+      color: rgba(0, 0, 0, 0.692); }
+    .container-fluid .row .cajaAcercaDe .mailAcercaDe {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ff802b;
+      font-size: 1rem; }
+    .container-fluid .row .cajaAcercaDe .disenoWeb {
+      font-size: 1.4rem; }
+
+/* estilos formulario html contacto con bootstrap */
+.mainContac {
+  height: 34rem; }
+  .mainContac .formularioContacto {
+    height: auto;
+    padding: 1.5rem;
+    margin: 2rem;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.473);
+    text-align: center; }
+    .mainContac .formularioContacto h1 {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 1.2rem;
+      color: rgba(255, 102, 0, 0.815);
+      margin-bottom: 1rem;
+      text-align: center; }
+    .mainContac .formularioContacto form .form-check-label {
+      font-size: .8rem;
+      text-align: left; }
+    .mainContac .formularioContacto form .mb-3 {
+      font-size: 1rem; }
+    .mainContac .formularioContacto form button {
+      background-color: #c1e3ff;
+      border: none;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.603);
+      transition: background-color .7s; }
+      .mainContac .formularioContacto form button:hover {
+        background-color: rgba(255, 102, 0, 0.815);
+        color: rgba(0, 0, 0, 0.603); }
+
+/* propiedades-estilos para noticias de los html de las secciones deportivas */
+.mainNoticiashtml .cajaNoticia {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 7%; }
+  .mainNoticiashtml .cajaNoticia .tituloSecundario {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: coral;
+    margin-bottom: 5%; }
+  .mainNoticiashtml .cajaNoticia .fotoNoticia {
+    width: 60%;
+    height: auto;
+    align-self: center; }
+  .mainNoticiashtml .cajaNoticia .tituloNoticiaSecciones {
+    margin-top: 5%;
+    font-size: 1.2rem; }
+  .mainNoticiashtml .cajaNoticia .textoNoticia {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small; }
+
+/* media queries para escalar cajas iframes y evitar deformaciones entre 600px y 1024px, también acomoda asides y otros estilos */
+@media screen and (min-width: 600px) {
+  .grillaPpal .cajaIframe {
+    width: 35rem;
+    height: 18rem; }
+  .grillaPpal .tituloPrincipal {
+    font-size: 2rem; }
+  footer .navFooterLocal ul li {
+    padding: 1.5rem; }
+    footer .navFooterLocal ul li a {
+      font-size: 1.4rem; }
+  .formularioTrivia {
+    font-size: 1.3rem; }
+    .formularioTrivia .formLocal legend {
+      font-size: 1.6rem; }
+  .edicAnteriores .tituloAside {
+    font-size: 1.4rem; }
+  .edicAnteriores .edicion1 a img, .edicAnteriores .edicion2 a img {
+    border: 1px solid gray;
+    transform: scale(1.3);
+    margin: 1rem; }
+  .redesSociales button {
+    font-size: 1.3rem; }
+  .textoNoticia {
+    padding-left: 3rem;
+    padding-right: 3rem; } }
+
+@media screen and (min-width: 1000px) {
+  .cajaIframe {
+    height: 18rem; } }
+
+/* query tablet 800px hasta 1024px */
+@media screen and (min-width: 800px) {
+  /* estilos header y demás html */
+  header .navbar .container-fluid .navbar-brand {
+    margin-top: 3rem; }
+    header .navbar .container-fluid .navbar-brand .logo {
+      transform: scale(1.7); }
+  .grillaPpal {
+    grid-template-areas: "tituloPrincipal tituloPrincipal" "noticiaUno noticiaDos" "noticiaTres noticiaCuatro" "noticiaCinco noticiaSeis" "formularioTrivia formularioTrivia" "edicAnteriores redesSociales";
+    gap: .5rem;
+    padding: 1%; }
+    .grillaPpal .tituloPrincipal {
+      margin-top: 3rem;
+      font-size: 2.7rem;
+      text-shadow: 0.2rem 0.2rem 0.3rem rgba(128, 128, 128, 0.767); }
+    .grillaPpal .noticiaCinco, .grillaPpal .noticiaSeis {
+      display: block; }
+    .grillaPpal .noticiaCinco {
+      grid-area: noticiaCinco;
+      margin-top: .5rem; }
+    .grillaPpal .noticiaSeis {
+      grid-area: noticiaSeis;
+      margin-top: .5rem; }
+    .grillaPpal .tituloNoticia, .grillaPpal .mainNoticiashtml .cajaNoticia .tituloNoticiaSecciones, .mainNoticiashtml .cajaNoticia .grillaPpal .tituloNoticiaSecciones {
+      font-size: 1.5rem; }
+    .grillaPpal .formularioTrivia {
+      font-size: 1.6rem; }
+    .grillaPpal .tituloAside {
+      font-size: 1.5rem; }
+    .grillaPpal .iconoFacebook, .grillaPpal .iconoWp, .grillaPpal .iconoTw, .grillaPpal .iconoInsta {
+      width: 3rem;
+      margin: 1rem; }
+    .grillaPpal .cajaIframe {
+      width: 24rem; }
+  /* estilos secciones deportivas demás html */
+  .mainNoticiashtml {
+    height: auto; }
+    .mainNoticiashtml .cajaNoticia .tituloSecundario {
+      font-size: 1.8rem; }
+    .mainNoticiashtml .cajaNoticia .tituloNoticiaSecciones {
+      font-size: 1.6rem; }
+    .mainNoticiashtml .cajaNoticia .textoNoticia {
+      margin-left: 5rem;
+      margin-right: 5rem;
+      margin-top: 1rem;
+      font-size: 1rem; }
+  /* estilos html contacto 800px */
+  .mainContac {
+    height: 50rem;
+    padding: 5rem; }
+    .mainContac .formularioContacto h1 {
+      font-size: 2.2rem; }
+    .mainContac .formularioContacto form .form-label {
+      font-size: 1.5rem; }
+    .mainContac .formularioContacto form .form-check-label {
+      font-size: 1.2rem; }
+    .mainContac .formularioContacto form button {
+      font-size: 1.5rem; }
+  /* estilos acercade 800px */
+  .cajaAcercaDe {
+    width: 400px;
+    height: 290px; }
+    .cajaAcercaDe .derechosAcercaDe {
+      font-size: 1.3rem; }
+    .cajaAcercaDe .mailAcercaDe {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ff802b;
+      font-size: 1.3rem; }
+    .cajaAcercaDe .disenoWeb {
+      font-size: 2rem; }
+    .cajaAcercaDe .animate__animated {
+      font-size: 3rem; }
+  .container-fluid main nav ul li a {
+    font-size: 1.3rem; } }
+
+/* query desktop 1024px */
+@media screen and (min-width: 1024px) {
+  /* estilos header index y demás html */
+  .grillaPpal {
+    grid-template-areas: "tituloPrincipal tituloPrincipal tituloPrincipal redesSociales" "noticiaUno noticiaDos noticiaTres formularioTrivia" "noticiaCuatro noticiaCinco noticiaSeis edicAnteriores";
+    grid-template-rows: .5fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr); }
+    .grillaPpal .tituloPrincipal {
+      font-size: 3rem;
+      text-shadow: 0.2rem 0.2rem 0.3rem rgba(128, 128, 128, 0.767); }
+    .grillaPpal .noticiaUno, .grillaPpal .noticiaDos, .grillaPpal .noticiaTres, .grillaPpal .noticiaCuatro, .grillaPpal .noticiaCinco, .grillaPpal .noticiaSeis {
+      margin-top: 0%; }
+    .grillaPpal .tituloNoticia, .grillaPpal .mainNoticiashtml .cajaNoticia .tituloNoticiaSecciones, .mainNoticiashtml .cajaNoticia .grillaPpal .tituloNoticiaSecciones {
+      font-size: 1.5rem; }
+    .grillaPpal .tituloAside {
+      margin: 0%; }
+    .grillaPpal .cajaIframe {
+      width: 100%;
+      height: 14rem;
+      transition: border-radius .7s, opacity .7s; }
+      .grillaPpal .cajaIframe:hover {
+        border-radius: 1rem;
+        opacity: 55%; }
+    .grillaPpal .formularioTrivia {
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+      margin-right: 0;
+      padding: 0;
+      font-size: 1.2rem; }
+      .grillaPpal .formularioTrivia form {
+        padding: 1rem; }
+        .grillaPpal .formularioTrivia form fieldset legend {
+          font-size: 1.4rem; }
+        .grillaPpal .formularioTrivia form fieldset label {
+          font-size: 1.2rem; }
+    .grillaPpal .edicAnteriores {
+      height: 15rem;
+      gap: 1rem; }
+      .grillaPpal .edicAnteriores .tituloAside {
+        font-size: 1.2rem; }
+      .grillaPpal .edicAnteriores .contenedorEdicAnteriores a img {
+        transition: transform .4s ease-in-out; }
+        .grillaPpal .edicAnteriores .contenedorEdicAnteriores a img:hover {
+          transform: scale(1.3); }
+  footer {
+    margin-top: 0; }
+    footer .navFooterLocal {
+      height: 5rem; }
+      footer .navFooterLocal ul {
+        align-items: center;
+        height: 100%; }
+        footer .navFooterLocal ul .footerContacto {
+          text-align: center;
+          padding: 0;
+          width: 11rem; }
+          footer .navFooterLocal ul .footerContacto:hover {
+            border-left: 3px double #71bd00;
+            border-right: 3px double #71bd00; }
+        footer .navFooterLocal ul .footerAcercade {
+          text-align: center;
+          padding: 0;
+          width: 22rem; }
+          footer .navFooterLocal ul .footerAcercade:hover {
+            border-left: 3px double #71bd00;
+            border-right: 3px double #71bd00; }
+        footer .navFooterLocal ul a {
+          transition: all .4s; }
+          footer .navFooterLocal ul a:hover {
+            color: #d8d8d8;
+            text-shadow: 0px 0px 6px black; }
+  /* estilos secciones deportivas de los demás html */
+  .mainNoticiashtml {
+    height: auto; }
+    .mainNoticiashtml .cajaNoticia .tituloSecundario {
+      font-size: 2rem; }
+    .mainNoticiashtml .cajaNoticia .tituloNoticiaSecciones {
+      font-size: 1.8rem; }
+    .mainNoticiashtml .cajaNoticia .textoNoticia {
+      padding-left: 6rem;
+      padding-right: 6rem;
+      font-size: 1.2rem; }
+  /* estilos html contacto 1024px */
+  .mainContac {
+    padding: 7rem;
+    height: auto; } }
+
+/* media query 1200px breakpoint xl bootstrap */
+@media screen and (min-width: 1200px) {
+  header .navbar {
+    width: 100%;
+    justify-content: space-around; }
+    header .navbar .container-fluid .navbar-brand {
+      justify-content: center;
+      width: 20%;
+      margin-right: 3rem;
+      margin-left: 3rem; }
+      header .navbar .container-fluid .navbar-brand .logo {
+        transform: scale(1.7); }
+    header .navbar .container-fluid .navbar-nav {
+      gap: 2rem; }
+    header .navbar .container-fluid .navbar-collapse {
+      justify-content: space-around; } }
+
+/* a partir de los 1400px se agrega espaciado adicional en el nav header */
+@media screen and (min-width: 1400px) {
+  header .navbar .container-fluid .navbar-nav {
+    gap: 4rem; } }
