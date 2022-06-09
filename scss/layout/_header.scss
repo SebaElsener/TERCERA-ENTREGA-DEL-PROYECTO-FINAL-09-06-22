@@ -1,10 +1,12 @@
 
 /* propiedades-estilos header */
-
-
 header{
     .nav-link{
         @extend .aNavHeader-Footer;
+        transition: color .5s;
+        &:hover{
+            color: rgb(110, 199, 255)
+        }
     }
     background: linear-gradient(rgba(255, 255, 0, 0.151), rgb(202, 238, 247)), url(../img/imgpuente.jpg);
     background-size: cover;
@@ -22,9 +24,10 @@ header{
             .navbar-nav{
                 text-align: center;
                 .nav-item{
-                    transition: background-color .6s;
+                    transition: all .6s;
                     &:hover{
                         background-color: rgba(178, 255, 255, 0.486);
+                        border-radius: .3rem;
                     }
                 }
             }

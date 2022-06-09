@@ -1,7 +1,8 @@
 @charset "UTF-8";
-.aNavHeader-Footer, header .nav-link, footer .navFooterLocal ul li a {
-  color: #696767;
-  font-weight: bolder;
+.aNavHeader-Footer, header .nav-link {
+  text-shadow: 1px 1px 4px #343434;
+  color: #7ce7e9;
+  font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.2rem;
   text-decoration: none; }
@@ -14,6 +15,12 @@
   margin: 0;
   font-weight: bold;
   line-height: normal; }
+
+.titulosFooter, .grillaFooter .footInicio a, .grillaFooter .contactoArchivoTelefono h5, .grillaFooter .contactoArchivoTelefono a, .grillaFooter .sobreNos h4, .grillaFooter .footerAcerca a {
+  font-size: 1.25rem;
+  color: #545454;
+  text-decoration: none;
+  font-weight: 500; }
 
 /* reset */
 * {
@@ -117,6 +124,10 @@ header {
   background-size: cover;
   animation-duration: 1s;
   animation-name: animationHeader; }
+  header .nav-link {
+    transition: color .5s; }
+    header .nav-link:hover {
+      color: #6ec7ff; }
   header .navbar .container-fluid {
     justify-content: space-around; }
     header .navbar .container-fluid .navbar-brand {
@@ -128,9 +139,10 @@ header {
     header .navbar .container-fluid .navbar-nav {
       text-align: center; }
       header .navbar .container-fluid .navbar-nav .nav-item {
-        transition: background-color .6s; }
+        transition: all .6s; }
         header .navbar .container-fluid .navbar-nav .nav-item:hover {
-          background-color: rgba(178, 255, 255, 0.486); }
+          background-color: rgba(178, 255, 255, 0.486);
+          border-radius: .3rem; }
 
 @keyframes animationHeader {
   from {
@@ -183,20 +195,47 @@ header {
     grid-area: redesSociales; }
 
 /* propiedades-estilos footer */
-footer {
+.grillaFooter {
+  display: grid;
   margin-top: 3rem;
-  padding: .5rem;
-  background: linear-gradient(#abfff8, #74ffca, greenyellow); }
-  footer .navFooterLocal ul {
-    /* este estilo pisa el estilo ul de bootstrap para que no quede desacomodado el footer */
+  padding: 1.7rem;
+  background-color: #cfffd5;
+  grid-template-areas: "irFooterInicio irFooterInicio" "sobreNosotros sobreNosotros" "contactoArchivoTelefono contactoArchivoTelefono" "acercaDe acercaDe"; }
+  .grillaFooter .footInicio {
+    grid-area: irFooterInicio;
+    border-bottom: 1px solid gray;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem; }
+    .grillaFooter .footInicio a {
+      transition: color .5s; }
+      .grillaFooter .footInicio a:hover {
+        color: #ff7f51; }
+  .grillaFooter .contactoArchivoTelefono {
     display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-    line-height: normal;
-    font-family: 'Courier New', Courier, monospace; }
-    footer .navFooterLocal ul li {
-      list-style: none; }
+    gap: .5rem;
+    flex-direction: column;
+    grid-area: contactoArchivoTelefono; }
+    .grillaFooter .contactoArchivoTelefono .htmlContacto, .grillaFooter .contactoArchivoTelefono .archivoEdiciones {
+      transition: color .5s; }
+      .grillaFooter .contactoArchivoTelefono .htmlContacto:hover, .grillaFooter .contactoArchivoTelefono .archivoEdiciones:hover {
+        color: #ff7f51; }
+  .grillaFooter .sobreNos {
+    grid-area: sobreNosotros; }
+    .grillaFooter .sobreNos p {
+      color: #747474;
+      text-align: justify;
+      margin-bottom: 2rem; }
+  .grillaFooter .footerAcerca {
+    background-color: #bae7c1;
+    grid-area: acercaDe;
+    text-align: center;
+    margin-top: 2rem; }
+    .grillaFooter .footerAcerca a {
+      font-weight: normal;
+      font-size: 1rem;
+      transition: color .5s; }
+      .grillaFooter .footerAcerca a:hover {
+        color: black; }
 
 /* estilos html acerca de */
 .container-fluid .row {
@@ -310,10 +349,9 @@ footer {
     height: 18rem; }
   .grillaPpal .tituloPrincipal {
     font-size: 2rem; }
-  footer .navFooterLocal ul li {
-    padding: 1.5rem; }
-    footer .navFooterLocal ul li a {
-      font-size: 1.4rem; }
+  .grillaFooter {
+    padding-left: 3rem;
+    padding-right: 3rem; }
   .formularioTrivia {
     font-size: 1.3rem; }
     .formularioTrivia .formLocal legend {
@@ -406,7 +444,10 @@ footer {
     .cajaAcercaDe .animate__animated {
       font-size: 3rem; }
   .container-fluid main nav ul li a {
-    font-size: 1.3rem; } }
+    font-size: 1.3rem; }
+  .grillaFooter {
+    padding-left: 4rem;
+    padding-right: 4rem; } }
 
 /* query desktop 1024px */
 @media screen and (min-width: 1024px) {
@@ -454,32 +495,11 @@ footer {
         transition: transform .4s ease-in-out; }
         .grillaPpal .edicAnteriores .contenedorEdicAnteriores a img:hover {
           transform: scale(1.3); }
-  footer {
-    margin-top: 0; }
-    footer .navFooterLocal {
-      height: 5rem; }
-      footer .navFooterLocal ul {
-        align-items: center;
-        height: 100%; }
-        footer .navFooterLocal ul .footerContacto {
-          text-align: center;
-          padding: 0;
-          width: 11rem; }
-          footer .navFooterLocal ul .footerContacto:hover {
-            border-left: 3px double #71bd00;
-            border-right: 3px double #71bd00; }
-        footer .navFooterLocal ul .footerAcercade {
-          text-align: center;
-          padding: 0;
-          width: 22rem; }
-          footer .navFooterLocal ul .footerAcercade:hover {
-            border-left: 3px double #71bd00;
-            border-right: 3px double #71bd00; }
-        footer .navFooterLocal ul a {
-          transition: all .4s; }
-          footer .navFooterLocal ul a:hover {
-            color: #d8d8d8;
-            text-shadow: 0px 0px 6px black; }
+  .grillaFooter {
+    margin-top: 0;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 20%;
+    grid-template-areas: "irFooterInicio irFooterInicio" "sobreNosotros contactoArchivoTelefono" "sobreNosotros contactoArchivoTelefono" "acercaDe acercaDe"; }
   /* estilos secciones deportivas de los demás html */
   .mainNoticiashtml {
     height: auto; }
@@ -507,7 +527,10 @@ footer {
       margin-right: 3rem;
       margin-left: 3rem; }
       header .navbar .container-fluid .navbar-brand .logo {
-        transform: scale(2.2); }
+        transform: scale(2.2);
+        transition: transform .5s; }
+        header .navbar .container-fluid .navbar-brand .logo:hover {
+          transform: scale(2.4); }
     header .navbar .container-fluid .navbar-nav {
       gap: 2rem; }
     header .navbar .container-fluid .navbar-collapse {

@@ -1,22 +1,73 @@
 
 /* propiedades-estilos footer */
-footer{
+.grillaFooter{
+    display: grid;
     margin-top: 3rem;
-    padding: .5rem;
-    background: linear-gradient(rgb(171, 255, 248), rgb(116, 255, 202), greenyellow);
-    .navFooterLocal{
-        ul{        /* este estilo pisa el estilo ul de bootstrap para que no quede desacomodado el footer */
-            display: flex;
-            justify-content: space-around;
-            margin: 0;
-            padding: 0;
-            line-height: normal;
-            font-family: 'Courier New', Courier, monospace;
-            li{
-                list-style: none;
-                a{
-                    @extend .aNavHeader-Footer;
-                }
+    padding: 1.7rem;
+    // background: linear-gradient(rgb(171, 255, 248), rgb(116, 255, 202), greenyellow);
+    background-color: rgb(207, 255, 213);
+    grid-template-areas:
+        "irFooterInicio irFooterInicio"
+        "sobreNosotros sobreNosotros"
+        "contactoArchivoTelefono contactoArchivoTelefono"
+        "acercaDe acercaDe";
+    .footInicio{
+        grid-area: irFooterInicio;
+        border-bottom: 1px solid gray;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        a{
+            @extend .titulosFooter;
+            transition: color .5s;
+            &:hover{
+                color: rgb(255, 127, 81);
+            }
+        }
+    }
+    .contactoArchivoTelefono{
+        display: flex;
+        gap: .5rem;
+        flex-direction: column;
+        grid-area: contactoArchivoTelefono;
+        h5{
+            @extend .titulosFooter;
+        }
+        a{
+            @extend .titulosFooter
+        }
+        .htmlContacto{
+            transition: color .5s;
+            &:hover{
+                color: rgb(255, 127, 81);
+            }
+        }
+        .archivoEdiciones{
+            @extend .htmlContacto
+        }
+    }
+    .sobreNos{
+        grid-area: sobreNosotros;
+        h4{
+            @extend .titulosFooter;
+        }
+        p{
+            color: $grisClaroFooter;
+            text-align: justify;
+            margin-bottom: 2rem;
+        }
+    }
+    .footerAcerca{
+        background-color: rgb(186, 231, 193);
+        grid-area: acercaDe;
+        text-align: center;
+        margin-top: 2rem;
+        a{
+            @extend .titulosFooter;
+            font-weight: normal;
+            font-size: 1rem;
+            transition: color .5s;
+            &:hover{
+                color: rgb(0, 0, 0);
             }
         }
     }

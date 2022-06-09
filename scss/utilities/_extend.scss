@@ -1,5 +1,6 @@
 
 .aNavHeader-Footer{
+    text-shadow: $sombraNavs;
     color: $colorTipoNavs;
     font-weight: $weightTipoNavs;
     font-family: $tipografiaNavs;
@@ -15,4 +16,11 @@
     margin: 0;
     font-weight: bold;
     line-height: normal;
+}
+
+.titulosFooter{
+    font-size: 1.25rem;
+    color: $grisOscuroFooter;
+    text-decoration: none;
+    font-weight: 500;
 }
